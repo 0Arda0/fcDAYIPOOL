@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    overflow: hidden; /* İçeriklerin taşmasını engeller */
+    animation: lightEffect 30s infinite;
+}
+
+.light {
+    position: absolute;
+    background-color: #990002;
+    opacity: 0; /* Işık başlangıçta görünmez */
+    width: 100%;
+    height: 100%;
+    animation: lightPulse 10s infinite;
+}
+
+@keyframes lightPulse {
+    0%, 100% {
+        opacity: 0; /* Işık sönük */
+    }
+    50% {
+        opacity: 1; /* Işık parlak */
+    }
+}
+
+@keyframes lightEffect {
+    0%, 100% {
+        background-color: #000000; /* Siyah başlangıç ve bitiş */
+    }
+    50% {
+        background-color: #ff0000; /* Kırmızı orta nokta */
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.logo {
+    width: 50px;
+}
+
+.menu {
+    background-color: 990002;
+    color: #fff;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+/* Başlık ve metinleri beyaz yap */
+h2, p {
+    color: #fff; /* Beyaz renk */
+}/* Görsel boyutlarını ayarlama */
+.product-gallery img {
+    max-width: 100%; /* Görselin maksimum genişliği 100% olacak şekilde ayarlanır */
+    height: auto; /* Yüksekliği otomatik olarak ayarlanır, oranları korur */
+}
+
+/* Metin uzunluğunu kısaltma */
+.product-gallery p {
+    overflow: hidden; /* Metnin taşan kısımlarını gizler */
+    text-overflow: ellipsis; /* Taşan metni üç nokta (...) ile kısaltır */
+    white-space: nowrap; /* Metnin satır sonlarına kadar sığmasını sağlar */
+}
+
+/* Kenar boşluklarını ayarlama */
+.product-gallery {
+    margin: 20px; /* Ürün galerisinin kenar boşluklarını artırır */
+}
+
+/* Daha az içerik kullanma */
+.tab-content p {
+    display: none; /* İçerik paragraflarını gizler */
+}
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80%, 1fr)); /* Ürün kutusu genişliği ayarı */
+    grid-gap: 20px; /* Ürün kutuları arası boşluk ayarı */
+}
+
+.product-gallery a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-gallery a:hover img {
+    transform: scale(1.1); /* Fare üzerine gelindiğinde yüzde 10 daha büyütme */
+}
+
+.product-gallery a .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay rengi ve opaklığı */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-gallery a:hover .overlay {
+    opacity: 1;
+}
+
+.product-gallery a .overlay i {
+    color: #fff;
+    font-size: 24px;
+}
+
+.product-gallery a .overlay i:hover {
+    color: #ccc;
+}
+
+     .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Kutu genişliği ayarı */
+        grid-gap: 20px; /* Kutular arası boşluk ayarı */
+    }
+    
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .gallery-item:hover {
+        transform: scale(1.1); /* Fare üzerine gelindiğinde yüzde 10 daha büyütme */
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Overlay rengi ve opaklığı */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .gallery-item:hover .overlay {
+        opacity: 1;
+    }
+    
+    .overlay i {
+        color: #fff;
+        font-size: 24px;
+    }
+    
+    .overlay i:hover {
+        color: #ccc;
+    }
+    /* Ürün galerisi için boyutları ayarla */
+.product-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-gallery-container a {
+    margin: 10px; /* Ürünler arasındaki boşluğu ayarla */
+}
+
+.product-gallery-container img {
+    max-width: 80%; /* Ürünlerin maksimum genişliğini belirle */
+    height: auto; /* Otomatik yükseklik */
+}
+.product-gallery-container {
+    overflow-y: scroll; /* Yalnızca dikey kaydırma */
+    max-height: 600px; /* İsteğe bağlı, içeriğin boyutuna göre ayarlayın */
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+}
+.gallery {
+    margin-top: 50px; /* İstediğiniz kadar bir üst boşluk ekleyin */
+}
+/* Küçük albüm resimleri için stil */
+.thumbnail {
+    width: 150px; /* İstediğiniz genişlik */
+    height: 150px; /* İstediğiniz yükseklik */
+    margin: 10px; /* Resimler arası boşluk */
+    cursor: pointer; /* Farenin üstüne gelince el işareti */
+}
+
+/* Büyük resim modalı için stil */
+.modal {
+    display: none; /* Modalı başlangıçta gizle */
+    position: fixed; /* Sabit konum */
+    z-index: 1; /* Diğer elementlerin üzerinde */
+    padding-top: 50px; /* Modal içeriğini üste yerleştir */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ekranın genişliği */
+    height: 100%; /* Ekranın yüksekliği */
+    overflow: auto; /* Yükseklik ve genişliğe göre kaydırma */
+    background-color: rgb(0,0,0); /* Siyah arka plan */
+    background-color: rgba(0,0,0,0.9); /* Siyah arka plan (şeffaflaştırılmış) */
+}
+
+/* Büyük resim modal içeriği için stil */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Modalın genişliği */
+    max-width: 700px; /* Maksimum genişlik */
+}
+
+/* Kapatma işareti için stil */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

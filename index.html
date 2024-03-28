@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayıpool Futbol Kulübü</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-BPpewa0o/nP4fuxEXMLa2UfmOkyt4LP2b46ykp+6szPTEGgAkbk5+miVobgyxMz01DLGsv9dTm7I2O6XYz0H2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <img src="logo.png" alt="Dayıpool Futbol Takımı Logo" class="logo">
+        <h1>DAYIPOOL Futbol Kulübü</h1>
+        <div class="music-control">
+            <button id="music-toggle">Müziği Aç/Kapat</button>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#anasayfa" class="tab-link">Ana Sayfa</a></li>
+                <li><a href="#urunler" class="tab-link">Ürünler</a></li>
+                <li><a href="#maclar" class="tab-link">Başarılarımız</a></li>
+                <li><a href="#galeri" class="tab-link">Galeri</a></li>
+                <li><a href="#hakkimizda" class="tab-link">Hakkımızda</a></li>
+                <li><a href="#iletisim" class="tab-link">Oyun Oyna</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="anasayfa" class="tab-content active">
+        <h2>Hoş Geldiniz!</h2>
+        <h2>DAYIPOOL</h2>
+        <p></p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/RdZyLD8fqnw" frameborder="0" allowfullscreen></iframe>
+        <iframe style="border-radius:12px; width: 100%;" src="https://open.spotify.com/embed/playlist/1H1pCc20Ws358I43Hn4Ee8?utm_source=generator" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div id="hakkimizda" class="tab-content">
+        <h2>Hakkımızda</h2>
+        <p>Takımımız 2020 yılında kuruldu</p>
+    </div>
+    
+    <div id="urunler" class="tab-content">
+        <h2>Ürünler</h2>
+        <div class="product-gallery-container">
+            <!-- Ürün galerisi içeriği buraya gelecek -->
+            <a href="urun1.html"><img src="urun1.jpg" alt="Ürün 1"></a>
+            <a href="urun2.html"><img src="urun2.jpg" alt="Ürün 2"></a>
+        </div>
+        <p>Takımımızın ürünleri hakkında daha fazla bilgi almak için lütfen bize ulaşın.</p>
+    </div>
+    
+    <div id="maclar" class="tab-content">
+        <h2>Önemli Anlar</h2>
+        <p>Geçmiş ve gelecek maçlarımızın listesi...</p>
+        
+        <!-- Galeri -->
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="thumbnail1.jpg" alt="Video 1" class="thumbnail">
+                <div class="overlay"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="gallery-item">
+                <img src="cupa1.jpg" alt="Video 2" class="thumbnail">
+                <div class="overlay"><i class="fas fa-play"></i></div>
+            </div>
+            <!-- Daha fazla galeri öğesi eklenebilir -->
+        </div>
+        
+        <!-- Videolar -->
+        <div class="videos">
+            <video id="video1" class="video" controls style="display: none;">
+                <source src="video1.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+            <video
+            id="video2" class="video" controls style="display: none;">
+            <source src="video2.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+        </video>
+        <!-- Daha fazla video eklenebilir -->
+    </div>
+</div>
+
+<!-- Kupa Büyük Görseller -->
+<div id="kupa-modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="kupa-img">
+    <div id="caption"></div>
+</div>
+
+<div id="galeri" class="tab-content">
+    <h2>Tıkla</h2>
+    <div class="gallery">
+        <img class="thumbnail" src="thumbnail1.jpg" alt="Resim 1" onclick="openModal('gorsel1.jpg')">
+        <img class="thumbnail" src="thumbnail1.jpg" alt="Resim 2" onclick="openModal('gorsel2.jpg')">
+        <img class="thumbnail" src="thumbnail1.jpg" alt="Resim 2" onclick="openModal('gorsel3.jpg')">
+        <img class="thumbnail" src="thumbnail1.jpg" alt="Resim 2" onclick="openModal('gorsel4.jpg')">
+        <!-- Daha fazla küçük resim eklenebilir -->
+        
+    </div>
+    
+    <!-- Büyük resim modalı -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+</div>
+
+<div id="iletisim" class="tab-content">
+    <h2>Oyun Oyna</h2>
+    <!-- Oyun iframe'i -->
+    "https://0arda0.github.io/tEROR.com/"
+    <iframe src
+     
+    ="https://scratch.mit.edu/projects/535352847/embed" allowtransparency="true" width="100%" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</div>
+<footer class="footer">
+    <p>&copy; 2024 By Arda</p>
+</footer>
+</div>
+<audio id="bg-music" loop>
+<source src="muzik.mp3" type="audio/mpeg">
+Tarayıcınız audio elementini desteklemiyor.
+</audio>
+<script>
+// Modalı açmak için JavaScript fonksiyonu
+function openModal(imageSrc) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+}
+
+// Modalı kapatmak için JavaScript fonksiyonu
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const tabs = document.querySelectorAll(".tab-link");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetTab = document.getElementById(targetId);
+            const tabContents = document.querySelectorAll(".tab-content");
+
+            tabContents.forEach(content => {
+                content.classList.remove("active");
+            });
+
+            targetTab.classList.add("active");
+        });
+    });
+
+    const bgMusic = document.getElementById('bg-music');
+    const musicToggle = document.getElementById('music-toggle');
+
+    musicToggle.addEventListener('click', function() {
+        if (bgMusic.paused) {
+            bgMusic.play();
+            musicToggle.textContent = 'Müziği Kapat';
+        } else {
+            bgMusic.pause();
+            musicToggle.textContent = 'Müziği Aç';
+        }
+    });
+});
+</script>
+</body>
+</html>
+```
